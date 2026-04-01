@@ -8,8 +8,7 @@ import com.application.portal.models.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    List<User> findByRole(String role);
-
     List<User> findByUserId(long userId);
-    
+
+    List<User> findUsersByRole(String role);
 }
