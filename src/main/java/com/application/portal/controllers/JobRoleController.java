@@ -1,11 +1,10 @@
 package com.application.portal.controllers;
 
-import com.application.portal.repositories.JobRoleRepository;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.application.portal.models.JobRole;
+import com.application.portal.repositories.JobRoleRepository;
 
 @RestController
 public class JobRoleController {
