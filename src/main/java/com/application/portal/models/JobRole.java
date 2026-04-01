@@ -49,8 +49,6 @@ public class JobRole {
     @Column(name = "\"statusId\"")
     private int statusId;
 
-    protected JobRole() {}
-
     public JobRole(String roleName, String location, LocalDate closingDate, String description, String responsibilities, int numberOfOpenPositions, String sharepointUrl, int capabilityId, int bandId, int statusId) {
         this.roleName = roleName;
         this.location = location;
@@ -64,6 +62,9 @@ public class JobRole {
         this.statusId = statusId;
     }
 
+    public JobRole() {
+    }
+
     @Override
     public String toString() {
         return String.format("JobRole[id=%d, roleName='%s', location='%s', closingDate='%s', description='%s', responsibilities='%s', numberOfOpenPositions=%d, sharepointUrl='%s', capabilityId=%d, bandId=%d, statusId=%d]", id, roleName, location, closingDate, description, responsibilities, numberOfOpenPositions, sharepointUrl, capabilityId, bandId, statusId);
@@ -73,7 +74,17 @@ public class JobRole {
         return id;
     }
 
+    public long setId(Long id) {
+        this.id = id;
+        return id;
+    }
+
     public String getRoleName() {
+        return roleName;
+    }
+
+    public String setRoleName(String roleName) {
+        this.roleName = roleName;
         return roleName;
     }
 
@@ -81,7 +92,17 @@ public class JobRole {
         return location;
     }
 
+    public String setLocation(String location) {
+        this.location = location;
+        return location;
+    }
+
     public LocalDate getClosingDate() {
+        return closingDate;
+    }
+
+    public LocalDate setClosingDate(LocalDate closingDate) {
+        this.closingDate = closingDate;
         return closingDate;
     }
 
@@ -89,7 +110,17 @@ public class JobRole {
         return description;
     }
 
+    public String setDescription(String description) {
+        this.description = description;
+        return description;
+    }
+
     public String getResponsibilities() {
+        return responsibilities;
+    }
+
+    public String setResponsibilities(String responsibilities) {
+        this.responsibilities = responsibilities;
         return responsibilities;
     }
 
@@ -97,7 +128,17 @@ public class JobRole {
         return numberOfOpenPositions;
     }
 
+    public int setNumberOfOpenPositions(int numberOfOpenPositions) {
+        this.numberOfOpenPositions = numberOfOpenPositions;
+        return numberOfOpenPositions;
+    }
+
     public String getSharepointUrl() {
+        return sharepointUrl;
+    }
+
+    public String setSharepointUrl(String sharepointUrl) {
+        this.sharepointUrl = sharepointUrl;
         return sharepointUrl;
     }
 
@@ -105,11 +146,26 @@ public class JobRole {
         return capabilityId;
     }
 
+    public int setCapabilityId(int capabilityId) {
+        this.capabilityId = capabilityId;
+        return capabilityId;
+    }
+
     public int getBandId() {
         return bandId;
     }
 
+    public int setBandId(int bandId) {
+        this.bandId = bandId;
+        return bandId;
+    }
+
     public int getStatusId() {
+        return statusId;
+    }
+
+    public int setStatusId(int statusId) {
+        this.statusId = statusId;
         return statusId;
     }
 

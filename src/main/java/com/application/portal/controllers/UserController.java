@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.application.portal.models.User;
 import com.application.portal.repositories.UserRepository;
 
-
-
 @RestController
 public class UserController {
     
