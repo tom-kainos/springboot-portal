@@ -6,7 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "\"User\"")
 public class User {
@@ -32,27 +36,6 @@ public class User {
         this.email = email;
         this.passwordHash = passwordHash;
         this.role = role;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("User[userId=%d, email='%s', passwordHash='%s', role='%s']", userId, email, passwordHash, role);
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPasswordHash() {
-        return passwordHash;
-    }
-
-    public String getRole() {
-        return role;
     }
 
 }
