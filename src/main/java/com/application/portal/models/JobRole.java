@@ -8,7 +8,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "\"JobRole\"")
 public class JobRole {
@@ -63,110 +67,6 @@ public class JobRole {
     }
 
     public JobRole() {
-    }
-
-    @Override
-    public String toString() {
-        return String.format("JobRole[id=%d, roleName='%s', location='%s', closingDate='%s', description='%s', responsibilities='%s', numberOfOpenPositions=%d, sharepointUrl='%s', capabilityId=%d, bandId=%d, statusId=%d]", id, roleName, location, closingDate, description, responsibilities, numberOfOpenPositions, sharepointUrl, capabilityId, bandId, statusId);
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public long setId(Long id) {
-        this.id = id;
-        return id;
-    }
-
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public String setRoleName(String roleName) {
-        this.roleName = roleName;
-        return roleName;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public String setLocation(String location) {
-        this.location = location;
-        return location;
-    }
-
-    public LocalDate getClosingDate() {
-        return closingDate;
-    }
-
-    public LocalDate setClosingDate(LocalDate closingDate) {
-        this.closingDate = closingDate;
-        return closingDate;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String setDescription(String description) {
-        this.description = description;
-        return description;
-    }
-
-    public String getResponsibilities() {
-        return responsibilities;
-    }
-
-    public String setResponsibilities(String responsibilities) {
-        this.responsibilities = responsibilities;
-        return responsibilities;
-    }
-
-    public int getNumberOfOpenPositions() {
-        return numberOfOpenPositions;
-    }
-
-    public int setNumberOfOpenPositions(int numberOfOpenPositions) {
-        this.numberOfOpenPositions = numberOfOpenPositions;
-        return numberOfOpenPositions;
-    }
-
-    public String getSharepointUrl() {
-        return sharepointUrl;
-    }
-
-    public String setSharepointUrl(String sharepointUrl) {
-        this.sharepointUrl = sharepointUrl;
-        return sharepointUrl;
-    }
-
-    public int getCapabilityId() {
-        return capabilityId;
-    }
-
-    public int setCapabilityId(int capabilityId) {
-        this.capabilityId = capabilityId;
-        return capabilityId;
-    }
-
-    public int getBandId() {
-        return bandId;
-    }
-
-    public int setBandId(int bandId) {
-        this.bandId = bandId;
-        return bandId;
-    }
-
-    public int getStatusId() {
-        return statusId;
-    }
-
-    public int setStatusId(int statusId) {
-        this.statusId = statusId;
-        return statusId;
     }
 
 }
